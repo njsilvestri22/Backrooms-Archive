@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { Link, Outlet, useRouter } from "@tanstack/react-router";
 import { Landmark, Menu, Search, Shuffle, Volume2, VolumeX, X } from "lucide-react";
-import { AmbientAudio } from "@/components/ambient-audio";
+import { AmbientAudio, unlockHum } from "@/components/ambient-audio";
 import { Grain } from "@/components/grain";
 import { SearchDialog } from "@/components/search-dialog";
 import { Button } from "@/components/ui/button";
@@ -66,8 +66,20 @@ export function ArchiveShell({ children }: { children?: ReactNode }) {
               <Shuffle className="size-5" />
               <span className="hidden sm:inline">Wander</span>
             </Button>
-            <Button type="button" variant="ghost" className="size-11" onClick={() => setAudioOn(!audioOn)} aria-label={audioOn ? "Mute hum" : "Play hum"}>
+            <Button
+              type="button"
+              variant={audioOn ? "default" : "ghost"}
+              className={cn("size-11 sm:w-auto sm:px-3", audioOn && "hum-glow")}
+              aria-pressed={audioOn}
+              aria-label={audioOn ? "Mute fluorescent hum" : "Play fluorescent hum"}
+              onClick={() => {
+                const next = !audioOn;
+                setAudioOn(next);
+                if (next) void unlockHum();
+              }}
+            >
               {audioOn ? <Volume2 className="size-5" /> : <VolumeX className="size-5" />}
+              <span className="hidden sm:inline">{audioOn ? "Hum on" : "Hum"}</span>
             </Button>
             <Button type="button" variant="ghost" className="size-11 lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Menu">
               {open ? <X className="size-5" /> : <Menu className="size-5" />}
