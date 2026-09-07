@@ -4,6 +4,7 @@ import { Grain } from "@/components/grain";
 import { NoclipOverlay } from "@/components/noclip-overlay";
 import { Button } from "@/components/ui/button";
 import { useArchiveStore } from "@/lib/archive-store";
+import { publicUrl } from "@/lib/public-url";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -14,7 +15,7 @@ function Home() {
 
   const goArchive = useCallback(() => {
     setIntroSeen(true);
-    void router.history.push("/archive");
+    void router.navigate({ to: "/archive" });
   }, [router, setIntroSeen]);
 
   function enter() {
@@ -28,7 +29,7 @@ function Home() {
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
-          backgroundImage: "url(/images/level-0.jpg)",
+          backgroundImage: `url(${publicUrl("/images/level-0.jpg")})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
