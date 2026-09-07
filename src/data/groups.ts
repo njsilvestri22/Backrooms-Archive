@@ -1,0 +1,30 @@
+import { IMG, entry } from "./entry";
+import type { ArchiveEntry } from "./types";
+
+export const coreGroups: ArchiveEntry[] = [
+  entry({ kind: "group", id: "meg", code: "Group 1", name: "M.E.G.", class: "habitable", image: IMG.meg, related: ["level-1", "the-hub"], summary: "Major Explorer Group. The closest thing to a government. Outposts, badges, a database that is this archive's cousin." }),
+  entry({ kind: "group", id: "bntg", code: "Group 2", name: "B.N.T.G.", class: "1", image: IMG.warehouse, related: ["level-1", "almond-water"], summary: "Backrooms Nonaligned Trade Group. Merchants. They will sell you water and a rumor." }),
+  entry({ kind: "group", id: "async", code: "Group K", name: "Async Research Institute", class: "unknown", image: IMG.async, canon: "kane", related: ["bacteria", "cameraman"], summary: "Kane Pixels' threshold project. 1989, 1990, 1991. They dug a hole in reality and filmed it." }),
+  entry({ kind: "group", id: "backroom-colonists", code: "Group 3", name: "The Backroom Colonists", class: "habitable", image: IMG.city, related: ["level-11"], summary: "Settlers who treat the Endless City as a town. Elections. Gardens. Denial." }),
+  entry({ kind: "group", id: "partygoers-group", code: "Group 67", name: "The Party", class: "5", image: IMG.fun, related: ["partygoers"], summary: "Not a club. A conversion engine. Membership is irreversible." }),
+  entry({ kind: "group", id: "eye-of-the-storm", code: "Group 4", name: "The Eye", class: "unknown", image: IMG.void, related: ["the-void"], summary: "Observers. They collect files. They do not always share them." }),
+  entry({ kind: "group", id: "kauer", code: "Group 5", name: "Kauer Research", class: "2", image: IMG.office, related: ["meg"], summary: "A research body older than M.E.G. in some files. Paper, latin, and caution." }),
+  entry({ kind: "group", id: "u.e.c", code: "Group 6", name: "U.E.C.", class: "2", image: IMG.city, related: ["level-11"], summary: "United-Explorers something. A coalition that frays. Flags on Level 11." }),
+  entry({ kind: "group", id: "the-lost", code: "Group 7", name: "The Lost", class: "3", image: IMG.dark, related: ["wretches"], summary: "Wanderers who stopped trying to exit. A culture of staying." }),
+  entry({ kind: "group", id: "anti-party", code: "Group 8", name: "Anti-Partygoer Group", class: "2", image: IMG.fun, related: ["party-poopers"], summary: "They fight the yellow smile. Casualties are the point and the cost." }),
+  entry({ kind: "group", id: "follow-the-yellow-wallpaper", code: "Group 9", name: "Followers of the Yellow Wallpaper", class: "psi", image: IMG.yellow, related: ["level-0"], summary: "A cult of the Lobby. They believe the hum is a god. They may be right in the way cults are." }),
+  entry({ kind: "group", id: "masked-maidens", code: "Group 10", name: "Masked Maidens", class: "2", image: IMG.hotel, related: ["level-5"], summary: "Level 5 staff who are not the Beast. Service with a veil." }),
+  entry({ kind: "group", id: "the-g.a.s", code: "Group 11", name: "The G.A.S.", class: "3", image: IMG.warehouse, related: ["bntg"], summary: "Guards and surplus. A paramilitary that guards caches." }),
+  entry({ kind: "group", id: "emg", code: "Group 12", name: "E.M.G.", class: "2", image: IMG.meg, related: ["meg"], summary: "A splinter of M.E.G. with different letterhead and the same yellow halls." }),
+  entry({ kind: "group", id: "the-church", code: "Group 13", name: "The Church of Rainbows", class: "4", image: IMG.fun, related: ["partygoers"], summary: "A faith that treats Fun as sacrament. Avoid their tables." }),
+  entry({ kind: "group", id: "overnight-express", code: "Group 14", name: "Overnight Express", class: "2", image: IMG.metro, related: ["the-metro"], summary: "Couriers of the Metro. Packages, keys, sometimes people." }),
+  entry({ kind: "group", id: "auctioneers", code: "Group 15", name: "The Auctioneers", class: "2", image: IMG.gold, related: ["level-450"], summary: "They run the mahogany hall. Bids are silent. Payment is not." }),
+  entry({ kind: "group", id: "hive-keepers", code: "Group 16", name: "Hive Keepers", class: "4", image: IMG.hive, related: ["the-hive"], summary: "Humans who work the Hive. Paid in jelly. Paid in staying unstung." }),
+  entry({ kind: "group", id: "frontrooms-watch", code: "Group 17", name: "Frontrooms Watch", class: "1", image: IMG.front, related: ["the-frontrooms"], summary: "People who swear they can still see home. Some can. Most are lying to themselves." }),
+  entry({ kind: "group", id: "the-scribes", code: "Group 18", name: "The Scribes", class: "1", image: IMG.office, related: ["blanche"], summary: "They copy files by hand. This archive would be thinner without them." }),
+  entry({ kind: "group", id: "red-door", code: "Group 19", name: "Red Door Collective", class: "4", image: IMG.red, related: ["the-red-rooms"], summary: "They walk the red interiors on purpose. Membership requires surviving one." }),
+  entry({ kind: "group", id: "sodium-watch", code: "Group 20", name: "Sodium Watch", class: "2", image: IMG.suburbs, related: ["level-9"], summary: "Level 9 night patrol that is not Faceling. They keep curfew for wanderers too." }),
+  entry({ kind: "group", id: "last-bus", code: "Group 21", name: "Last Bus Club", class: "2", image: IMG.metro, related: ["the-metro"], summary: "They wait for a bus that is rumored to reach the Frontrooms. Some have been waiting years." }),
+  entry({ kind: "group", id: "quiet-trade", code: "Group 22", name: "Quiet Trade", class: "1", image: IMG.warehouse, related: ["bntg"], summary: "A silent market. No voices. Prices in objects." }),
+  entry({ kind: "group", id: "paper-saints", code: "Group 23", name: "Paper Saints", class: "psi", image: IMG.office, related: ["the-end"], summary: "They worship The End's library. They believe filing is prayer." }),
+];

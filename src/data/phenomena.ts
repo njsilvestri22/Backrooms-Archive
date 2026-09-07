@@ -1,0 +1,30 @@
+import { IMG, entry } from "./entry";
+import type { ArchiveEntry } from "./types";
+
+export const corePhenomena: ArchiveEntry[] = [
+  entry({ kind: "phenomenon", id: "noclip", code: "Phenomenon 1", name: "Noclipping", class: "variable", image: IMG.yellow, related: ["level-0", "the-frontrooms"], summary: "The event that starts the file. Falling through a wall, a floor, a moment. Arrival is almost always Level 0." }),
+  entry({ kind: "phenomenon", id: "the-hum", code: "Phenomenon 2", name: "The Hum", class: "1", image: IMG.yellow, related: ["level-0"], summary: "Fluorescent lights at maximum buzz. It is not just sound. It is a pressure. Some people learn to love it. Those people stay." }),
+  entry({ kind: "phenomenon", id: "the-cycle", code: "Phenomenon 3", name: "The Cycle", class: "variable", image: IMG.dark, related: ["wretches"], summary: "Lights fail, entities hunt, sanity frays, lights return. A day without a sun." }),
+  entry({ kind: "phenomenon", id: "insanity", code: "Phenomenon 4", name: "Insanity", class: "5", image: IMG.dark, related: ["wretches", "almond-water"], summary: "The Backrooms' weather of the mind. Almond water stalls it. Isolation feeds it." }),
+  entry({ kind: "phenomenon", id: "threshold", code: "Phenomenon K", name: "The Threshold", class: "unknown", image: IMG.async, canon: "kane", related: ["async", "bacteria"], summary: "Async's word for the tear. Not a wiki door. A room that should not exist, filmed in 1990." }),
+  entry({ kind: "phenomenon", id: "clipping-error", code: "Phenomenon 5", name: "Clipping Error", class: "4", image: IMG.void, related: ["the-void", "the-broken"], summary: "A noclip that fails. The Void, or worse: half in a wall." }),
+  entry({ kind: "phenomenon", id: "level-shift", code: "Phenomenon 6", name: "Level Shift", class: "variable", image: IMG.hub, related: ["the-hub"], summary: "Rooms that become other rooms while you are in them. Maps hate this." }),
+  entry({ kind: "phenomenon", id: "name-loss", code: "Phenomenon 7", name: "Name Loss", class: "psi", image: IMG.void, related: ["memory-worm"], summary: "You forget your name. Then your exits. Then why you were walking." }),
+  entry({ kind: "phenomenon", id: "party-invite", code: "Phenomenon 8", name: "The Invitation", class: "5", image: IMG.fun, related: ["happyfiles", "partygoers"], summary: "Flyers, doors, frosting smell. Consent is implied if you follow." }),
+  entry({ kind: "phenomenon", id: "window-gaze", code: "Phenomenon 9", name: "Window Gaze", class: "4", image: IMG.windows, related: ["windows", "level-188"], summary: "Being seen by glass. The remedy is not looking back. The remedy is leaving." }),
+  entry({ kind: "phenomenon", id: "carpet-fluid", code: "Phenomenon 10", name: "Carpet Fluid", class: "2", image: IMG.yellow, related: ["level-0"], summary: "The wet in Level 0. Not water. Do not drink. Do not ask what it is." }),
+  entry({ kind: "phenomenon", id: "false-exit", code: "Phenomenon 11", name: "False Exit", class: "4", image: IMG.front, related: ["the-end", "level-3999"], summary: "A door, a street, a mother's voice. The Frontrooms as bait." }),
+  entry({ kind: "phenomenon", id: "time-skip", code: "Phenomenon 12", name: "Time Skip", class: "psi", image: IMG.motion, related: ["level-94"], summary: "Hours vanish. Beards grow. Watches disagree. The Cycle does not care." }),
+  entry({ kind: "phenomenon", id: "light-hunger", code: "Phenomenon 13", name: "Light Hunger", class: "3", image: IMG.dark, related: ["level-6", "smilers"], summary: "Lamps fail because something is eating the photons. Or the will to keep them on." }),
+  entry({ kind: "phenomenon", id: "echo-location", code: "Phenomenon 14", name: "Hostile Echolocation", class: "4", image: IMG.dark, related: ["howlers"], summary: "Screams used as sonar. If you answer, you are a point on a map." }),
+  entry({ kind: "phenomenon", id: "mold-bloom", code: "Phenomenon 15", name: "Mold Bloom", class: "3", image: IMG.pipes, related: ["hydrolitis"], summary: "Black growth that writes patterns. Some are maps. Some are lungs." }),
+  entry({ kind: "phenomenon", id: "static-snow", code: "Phenomenon 16", name: "Static Snow", class: "psi", image: IMG.async, related: ["level-39"], summary: "Analog snow filling a room. Walking through it is a channel change." }),
+  entry({ kind: "phenomenon", id: "door-bloom", code: "Phenomenon 17", name: "Door Bloom", class: "2", image: IMG.hub, related: ["the-hub"], summary: "New doors appearing overnight. Some have keys. Some have teeth." }),
+  entry({ kind: "phenomenon", id: "hum-spike", code: "Phenomenon 18", name: "Hum Spike", class: "3", image: IMG.yellow, related: ["the-hum"], summary: "The lights get louder. Nosebleeds. Entities pause, or they do not." }),
+  entry({ kind: "phenomenon", id: "carpet-tide", code: "Phenomenon 19", name: "Carpet Tide", class: "2", image: IMG.yellow, related: ["level-0"], summary: "The wet in the carpet rises like a sea. Ankles. Then knees. Then a different level." }),
+  entry({ kind: "phenomenon", id: "hall-fold", code: "Phenomenon 20", name: "Hall Fold", class: "4", image: IMG.bang, related: ["the-broken"], summary: "A corridor that origami's itself. You may exit as two people. You will not both live." }),
+  entry({ kind: "phenomenon", id: "soft-rain", code: "Phenomenon 21", name: "Soft Rain", class: "1", image: IMG.office, related: ["level-4"], summary: "Rain on windows with no outside. It is comforting. That is the trick." }),
+  entry({ kind: "phenomenon", id: "clock-skip", code: "Phenomenon 22", name: "Clock Skip", class: "psi", image: IMG.school, related: ["level-14"], summary: "Clocks jump. Bells ring for classes that never start." }),
+  entry({ kind: "phenomenon", id: "flicker-event", code: "Phenomenon 23", name: "Flicker Event", class: "3", image: IMG.electrical, related: ["level-3"], summary: "A building-wide blink. During the dark, counts of people change." }),
+  entry({ kind: "phenomenon", id: "wax-weather", code: "Phenomenon 24", name: "Wax Weather", class: "4", image: IMG.hive, related: ["the-hive"], summary: "The Hive raining warm wax. Shelter or drown slowly, sweetly." }),
+];

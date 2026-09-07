@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0a08;
+  --color-surface: #141210;
+  --color-elevated: #1d1a16;
+  --color-paper: #d8c9a4;
+  --color-paper-ink: #2a2418;
+  --color-paper-muted: #6a5e45;
+  --color-fg: #ebe4d4;
+  --color-muted: #9c917c;
+  --color-subtle: #6e6658;
+  --color-border: #2c281f;
+  --color-accent: #c9b56a;
+  --color-accent-dim: #7a6e3a;
+  --color-danger: #c45a48;
+  --color-safe: #7a9a78;
+  --color-warn: #c4924a;
+  --color-info: #7a8fa0;
+
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgba(235, 228, 212, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(235, 228, 212, 0.14);
+  --shadow-paper:
+    0 0 0 1px rgba(42, 36, 24, 0.12),
+    0 18px 40px -18px rgba(0, 0, 0, 0.55);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  img {
+    outline: 1px solid rgba(235, 228, 212, 0.1);
+    outline-offset: -1px;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 41;
+  opacity: 0.04;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    rgba(0, 0, 0, 0.35) 2px,
+    rgba(0, 0, 0, 0.35) 3px
+  );
+}
+
+.flicker {
+  animation: flicker 6s var(--ease-out) infinite;
+}
+@keyframes flicker {
+  0%,
+  92%,
+  100% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.65;
+  }
+  94% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.8;
+  }
+}
+
+.hum-glow {
+  box-shadow: 0 0 24px rgba(201, 181, 106, 0.35);
+}
+
+.noclip-flash {
+  animation: noclip 520ms var(--ease-out) forwards;
+}
+@keyframes noclip {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+    filter: blur(12px);
+  }
+  40% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+.stagger > * {
+  animation: rise 420ms var(--ease-out) both;
+}
+.stagger > *:nth-child(1) { animation-delay: 40ms; }
+.stagger > *:nth-child(2) { animation-delay: 80ms; }
+.stagger > *:nth-child(3) { animation-delay: 120ms; }
+.stagger > *:nth-child(4) { animation-delay: 160ms; }
+.stagger > *:nth-child(5) { animation-delay: 200ms; }
+.stagger > *:nth-child(6) { animation-delay: 240ms; }
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flicker,
+  .noclip-flash,
+  .stagger > * {
+    animation: none;
+  }
+}

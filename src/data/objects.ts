@@ -1,0 +1,33 @@
+import { IMG, entry } from "./entry";
+import type { ArchiveEntry } from "./types";
+
+export const coreObjects: ArchiveEntry[] = [
+  entry({ kind: "object", id: "almond-water", code: "Object 1", name: "Almond Water", class: "0", image: IMG.almond, related: ["level-1", "wretches"], summary: "Cloudy almond-colored liquid. Hydration, calm, a stall against turning. Counterfeit bottles exist." }),
+  entry({ kind: "object", id: "liquid-pain", code: "Object 2", name: "Liquid Pain", class: "5", image: IMG.pain, related: ["almond-water"], summary: "Looks like almond water if you are tired. It is not. One sip is a file you do not finish." }),
+  entry({ kind: "object", id: "moth-jelly", code: "Object 8", name: "Moth Jelly", class: "1", image: IMG.hive, related: ["deathmoths", "the-hive"], summary: "Royal jelly analog. Nutritive. Overuse attracts Deathmoths. The Hive taxes it." }),
+  entry({ kind: "object", id: "level-keys", code: "Object 11", name: "Level Keys", class: "unknown", image: IMG.hub, related: ["keymaster", "the-hub"], summary: "Keys that open Hub doors. The Keymaster prices them in favors." }),
+  entry({ kind: "object", id: "cashew-water", code: "Object 3", name: "Cashew Water", class: "4", image: IMG.pain, related: ["almond-water"], summary: "A bitter cousin. Hallucinations. Sometimes useful. Usually not." }),
+  entry({ kind: "object", id: "royal-rations", code: "Object 4", name: "Royal Rations", class: "1", image: IMG.fun, related: ["level-1"], summary: "Canned meals that appear in caches. Edible. The aftertaste is loneliness." }),
+  entry({ kind: "object", id: "flashlights", code: "Object 5", name: "Flashlights", class: "1", image: IMG.dark, related: ["level-6", "smilers"], summary: "Work until they do not. Level 6 eats batteries. Smilers hate the beam and love the target." }),
+  entry({ kind: "object", id: "walkie-talkies", code: "Object 6", name: "Walkie-Talkies", class: "2", image: IMG.meg, related: ["meg"], summary: "M.E.G. issue. Channels include things that are not M.E.G." }),
+  entry({ kind: "object", id: "happyfiles", code: "Object 67", name: "Happyfiles", class: "5", image: IMG.fun, related: ["partygoers"], summary: "Invitations, flyers, party hats. Handling one is consent." }),
+  entry({ kind: "object", id: "memory-film", code: "Object 7", name: "Memory Film", class: "psi", image: IMG.async, canon: "kane", summary: "Analog tape that records rooms that have not happened yet. Async used it. You should not." }),
+  entry({ kind: "object", id: "neon-water", code: "Object 9", name: "Neon Water", class: "2", image: IMG.arcade, related: ["level-3999"], summary: "Glows. Hydrates. May be a ticket toward 3999. May be a light for moths." }),
+  entry({ kind: "object", id: "backshrooms", code: "Object 10", name: "Backshrooms", class: "2", image: IMG.cave, related: ["level-8"], summary: "Fungi. Some heal. Some are the Hive's cousins. Color is not a guide." }),
+  entry({ kind: "object", id: "level-maps", code: "Object 12", name: "Level Maps", class: "unknown", image: IMG.office, related: ["meg"], summary: "Paper that claims to be a floorplan. Half of them are bait." }),
+  entry({ kind: "object", id: "object-14", code: "Object 14", name: "Smiler Repellent", class: "1", image: IMG.almond, related: ["smilers"], summary: "A spray that smells like almonds and ozone. Buys seconds." }),
+  entry({ kind: "object", id: "object-15", code: "Object 15", name: "Jerry's Advice", class: "unknown", image: IMG.hotel, related: ["jerry"], summary: "Notes slid under doors on Level 5. Sometimes correct." }),
+  entry({ kind: "object", id: "object-16", code: "Object 16", name: "Pool Float", class: "1", image: IMG.pool, related: ["level-37"], summary: "Keeps you up. Hydrolitis does not care about buoyancy." }),
+  entry({ kind: "object", id: "object-17", code: "Object 17", name: "Arcade Token", class: "unknown", image: IMG.arcade, related: ["level-3999"], summary: "Buys a game. Winning is rumored to be an exit." }),
+  entry({ kind: "object", id: "object-18", code: "Object 18", name: "M.E.G. Badge", class: "1", image: IMG.meg, related: ["meg"], summary: "Identification. Gets you into outposts. Gets you targeted outside them." }),
+  entry({ kind: "object", id: "object-19", code: "Object 19", name: "Broken iPhone", class: "2", image: IMG.office, related: ["the-frontrooms"], summary: "No signal. Photos of yellow halls you do not remember taking." }),
+  entry({ kind: "object", id: "object-20", code: "Object 20", name: "Carpet Sample", class: "0", image: IMG.yellow, related: ["level-0"], summary: "A square of Level 0. Smells like the hum. Useful as proof. Useless as a map." }),
+  entry({ kind: "object", id: "object-21", code: "Object 21", name: "Hotel Keycard", class: "2", image: IMG.hotel, related: ["level-5"], summary: "Opens a room. The room may already have a guest." }),
+  entry({ kind: "object", id: "object-22", code: "Object 22", name: "Wax Candle", class: "1", image: IMG.hive, related: ["the-hive"], summary: "Hive wax. Burns with a smell that moths treat as a dinner bell." }),
+  entry({ kind: "object", id: "object-23", code: "Object 23", name: "Red Envelope", class: "4", image: IMG.red, related: ["the-red-rooms"], summary: "An invitation to a room that is not a party. Do not open in the dark." }),
+  entry({ kind: "object", id: "object-24", code: "Object 24", name: "Transit Ticket", class: "2", image: IMG.metro, related: ["the-metro"], summary: "One ride. Destination is printed in a font that shifts." }),
+  entry({ kind: "object", id: "object-25", code: "Object 25", name: "Gold Coin", class: "1", image: IMG.gold, related: ["the-goldrooms", "level-450"], summary: "Spends at the Auction House. Value is not numerical." }),
+  entry({ kind: "object", id: "object-26", code: "Object 26", name: "Painkiller", class: "2", image: IMG.hospital, related: ["liquid-pain"], summary: "Frontrooms medicine. Helps until the Backrooms notices it is foreign." }),
+  entry({ kind: "object", id: "object-27", code: "Object 27", name: "School Lunch", class: "1", image: IMG.school, related: ["level-52"], summary: "A tray. Edible. The milk is not almond water and not milk." }),
+  entry({ kind: "object", id: "object-28", code: "Object 28", name: "VHS Camera", class: "unknown", image: IMG.async, canon: "kane", summary: "Records analog. Sometimes records rooms you have not entered. Async property." }),
+];
